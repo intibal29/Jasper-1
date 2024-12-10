@@ -16,10 +16,10 @@ public class HelloController {
     protected void onHelloButtonClick() {
         try {
             // Ruta del archivo Jasper (ya compilado)
-            String reportPath = "src/main/resources/jasper/ejer1.jasper";
+            String reportPath = getClass().getResource("/jasper/ejer1.jasper").getPath();
 
             // Configurar conexión a la base de datos
-            String dbUrl = "jdbc:mysql://localhost:3306/pais";
+            String dbUrl = "jdbc:mysql://localhost:3306/paises";
             String dbUser = "root";
             String dbPassword = "1234";
 
